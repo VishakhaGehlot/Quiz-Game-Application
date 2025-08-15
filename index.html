@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game Application</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="quiz-container">
+
+        <div id="quiz-section">
+            <div class="quiz-header">
+                <div class="quiz-title">
+                    <div class="quiz-icon"></div>
+                    <h1>Quiz Game</h1>
+                </div>
+                <div class="quiz-info">
+                    <span class="question-counter" id="question-counter">Question 1 of 6</span>
+                    <span class="score-badge" id="score-badge">Score: 0</span>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <div class="question-section">
+                <h2 class="question-text" id="question-text"></h2>
+                <p class="question-type-hint" id="question-hint"></p>
+                <div class="options-container" id="options-container"></div>
+                <div id="correct-answer-display" class="correct-answer hidden">
+                    <strong>Correct answer:</strong> <span id="correct-answer-text"></span>
+                </div>
+            </div>
+
+            <div class="action-section">
+                <div class="question-type-hint" id="question-type-text"></div>
+                <button class="action-button" id="submit-btn" onclick="submitAnswer()">Submit Answer</button>
+                <button class="action-button hidden" id="next-btn" onclick="nextQuestion()">Next Question</button>
+            </div>
+        </div>
+
+
+        <div id="results-section" class="results-container hidden">
+            <div class="trophy-icon">🏆</div>
+            <h1 class="results-title">Quiz Completed!</h1>
+            <p class="results-subtitle">Congratulations on finishing the quiz!</p>
+
+            <div class="score-display">
+                <h2>Your Score</h2>
+                <p class="score-numbers" id="final-score">0/6</p>
+                <p class="score-percentage" id="final-percentage">0%</p>
+            </div>
+
+            <div class="performance-message" id="performance-message"></div>
+
+            <button class="restart-button" onclick="restartQuiz()">
+                <span>↻</span>
+                Take Quiz Again
+            </button>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
